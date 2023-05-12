@@ -1,7 +1,11 @@
+import FilterDropdown from "../FilterDropdown/FilterDropdown"
+import MovieCard from "../MovieCard/MovieCard"
+
 const MovieList = () => {
     return (
         <div>
-            <h1>MovieList</h1>
+            <FilterDropdown />
+            <MovieCard />
         </div>
     )
 }

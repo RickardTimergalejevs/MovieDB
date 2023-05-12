@@ -1,7 +1,11 @@
+import "./MyMovies.css"
+import { FiEye } from "react-icons/fi"
+
 const MyMovies = () => {
     return (
-        <div>
-            <h1>MyMovies</h1>
+        <div className="my_movies">
+            <p>0</p>
+            <FiEye />
         </div>
     )
 }

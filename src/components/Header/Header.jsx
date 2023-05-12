@@ -1,8 +1,16 @@
+import NavLinks from "../NavLinks/NavLinks"
+import MyMovies from "../MyMovies/MyMovies"
+import "./Header.css"
+
 const Header = () => {
     return(
-        <div>
-            <h1>Header</h1>
-        </div>
+        <header>
+            <h1>Movies<span>DB</span></h1>
+            <div>
+            <NavLinks />
+            <MyMovies />
+            </div>
+        </header>
     )
 }
 

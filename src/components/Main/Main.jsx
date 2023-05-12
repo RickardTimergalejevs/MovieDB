@@ -1,8 +1,16 @@
+import MovieList from "../MovieList/MovieList"
+import MovieDetails from "../MovieDetails/MovieDetails"
+import About from "../About/About"
+import Contact from "../Contact/Contact"
+
 const Main = () => {
     return (
-        <div>
-            <h1>Main</h1>
-        </div>
+        <main>
+            <MovieList />
+            <MovieDetails />
+            <About />
+            <Contact />
+        </main>
     ) 
 }
 
