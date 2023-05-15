@@ -3,9 +3,9 @@ import "./NavLinks.css"
 const NavLinks = () => {
     return (
             <ul>
-                <li>Movies</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="/">Movies</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
     )
 }
