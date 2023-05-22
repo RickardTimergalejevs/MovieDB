@@ -39,8 +39,8 @@
 }
 
 .release_info p:nth-child(1) {
-    padding: 0.2rem;
-    border-radius: 1px;
+    padding: 0.3rem;
+    border-radius: 8px;
     color: rgb(38, 38, 38);
 }
 
@@ -50,19 +50,20 @@
     gap: 0.5rem;
 }
   
-  .rating_info svg {
+.rating_info svg {
     width: 28px;
     height: 28px;
     color: rgb(243, 226, 47);
 }
   
-  .genre_info {
+.genre_info {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
   
-  .genre_info p {
+.genre_info p {
     padding: 0.3rem 0.6rem;
-    border: 2px solid gray;
+    border: 2px solid rgb(182, 182, 182);
+    border-radius: 10px;
 }

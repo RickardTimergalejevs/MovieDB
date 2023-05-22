@@ -2,6 +2,7 @@ import MarkAsSeenBtn from "../MarkAsSeenBtn/MarkAsSeenBtn"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import "./MovieDetails.css"
+import { FaImdb } from "react-icons/fa"
 
 const MovieDetails = () => {
     const [movie, setMovie] = useState()
@@ -13,7 +14,6 @@ const MovieDetails = () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_API_KEY}`)
             const data = await res.json()
 
-            console.log(data);
             setMovie(data)
         }
 
@@ -30,10 +30,11 @@ const MovieDetails = () => {
                 <div className="top_info">
                     <div className="release_info">
                         <p style={{backgroundColor: movie.status === "Released" ? "rgb(129, 229, 207)" : "rgb(229, 129, 144)"}}>{movie.status}</p>
-                        <p>{movie.release_date}</p>
+                        <p>Release Date: {movie.release_date}</p>
                     </div>
 
                     <div className="rating_info">
+                        <FaImdb />
                         <p>{movie.vote_average.toFixed(1)}</p>
                     </div>
 
