@@ -1,12 +1,10 @@
-const FilterDropdown = () => {
+const FilterDropdown = ({ filter, setFilter }) => {
     return (
-        <div>
-            <select>
+            <select value={filter} onChange={(e) => setFilter({ filter: e.target.value })}>
                 <option value="popular">Popular</option>
                 <option value="top_rated">Top Rated</option>
                 <option value="upcoming">Upcoming</option>
             </select>
-        </div>
     )
 }
 
