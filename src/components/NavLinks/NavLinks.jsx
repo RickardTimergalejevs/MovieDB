@@ -1,11 +1,20 @@
 import "./NavLinks.css"
+import { NavLink } from "react-router-dom"
 
 const NavLinks = () => {
     return (
             <ul>
-                <li><a href="/">Movies</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
+                <NavLink to="/">
+                <li>Movies</li>
+                </NavLink>
+
+                <NavLink to="/about">
+                <li>About</li>
+                </NavLink>
+
+                <NavLink to="/contact">
+                <li>Contact</li>
+                </NavLink>
             </ul>
     )
 }

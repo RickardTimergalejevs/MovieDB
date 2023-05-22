@@ -1,31 +1,15 @@
 import MarkAsSeenBtn from "../MarkAsSeenBtn/MarkAsSeenBtn"
 import "./MovieCard.css"
-import { useState, useEffect } from "react"
 
-const MovieCard = () => {
-
-    const [movies, setMovies] = useState([])
-
-    useEffect(() => {
-        const fetchMovies = async () => {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`)
-        const data = await response.json()
-
-        console.log(data);
-        setMovies(data.results)
-        }
-        fetchMovies()
-    }, [])
-
+const MovieCard = ({ movie }) => {
     return (
-        <div>
-            {movies.map((movie) => (
-            <div key={movie.id}>
-                <h2>{movie.title}</h2>
-                <img src={"https://image.tmdb.org/t/p/w300" + movie.poster_path}/>
+        <div className="movie_card">
+            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
+            <div className="movie_card_info">
+                <h4>{movie.original_title}</h4>
+                <p>{movie.vote_average}</p>
                 <MarkAsSeenBtn />
             </div>
-            ))}
         </div>
     )
 }
