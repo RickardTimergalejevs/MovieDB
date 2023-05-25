@@ -1,9 +1,11 @@
-ul {
-    display: flex;
+.nav_links {
     list-style-type: none;
-    gap: 0.8rem;
-    margin-right: 0.8rem;
-    text-transform: uppercase;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .active {

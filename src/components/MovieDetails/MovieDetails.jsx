@@ -5,7 +5,7 @@ import "./MovieDetails.css"
 import { FaImdb } from "react-icons/fa"
 
 const MovieDetails = () => {
-    const [movie, setMovie] = useState()
+    const [movie, setMovie] = useState(null)
 
     const { id } = useParams()
 
